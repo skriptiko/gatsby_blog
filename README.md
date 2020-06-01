@@ -1,4 +1,3 @@
-
 1.  **Start developing.**
 
     Navigate into site directory and start it up.
@@ -11,7 +10,7 @@
 
     Site is running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data.
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`\_. This is a tool you can use to experiment with querying your data.
 
 1.  **Tech stack**
     ```shell
