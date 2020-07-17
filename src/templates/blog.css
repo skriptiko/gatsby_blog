@@ -1,0 +1,95 @@
+.blog__hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 460px;
+  width: 100vw;
+  position: relative;
+  background-color: transparent;
+}
+
+.blog__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 460px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  /*background-color: rgba(0, 0, 0, 0.5)*/
+}
+
+.blog__title {
+  text-align: center;
+  max-width: 960px;
+}
+
+.blog__wrapper {
+  width: 100vw;
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.blog__content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.blog__content p {
+  font-family: Muli, sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 300;
+  color: #0a0a0a;
+  margin: 40px 0;
+}
+
+.blog__content p:first-child {
+  margin-top: -100px;
+}
+
+.blog__content blockquote {
+  margin: 0 0 60px 0;
+}
+
+.blog__content blockquote:before {
+  content: url('../images/quote.svg');
+  display: inline-block;
+  width: 50px;
+  transform: translateY(30px);
+}
+
+.blog__content blockquote p {
+  font-family: Muli, sans-serif;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+
+.blog__content img {
+  border-radius: 5px;
+  margin: 0;
+}
+
+.center {
+  width: 100%;
+  display: block;
+  margin: 60px auto;
+}
+
+.right {
+  float: right;
+  margin: 40px 0 60px 60px;
+}
+
+@media screen and (max-width: 1000px) {
+  .right {
+    float: none;
+    width: 90%;
+    display: block;
+    margin: 60px auto;
+  }
+}

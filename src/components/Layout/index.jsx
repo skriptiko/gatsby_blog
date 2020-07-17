@@ -4,8 +4,8 @@ import { useStaticQuery, Link } from 'gatsby'
 import { Layout as Wrapper, Avatar } from 'antd'
 import { DingtalkOutlined } from '@ant-design/icons'
 
-import Nav from './Nav'
-import './layout.css'
+import Nav from '../Nav'
+import './index.css'
 
 const { Content, Footer, Sider } = Wrapper
 
