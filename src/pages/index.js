@@ -1,11 +1,15 @@
-import React from "react"
+import React from 'react'
 
-import Layout from "../components/Layout"
-import ListArticles from "../components/ListArticles"
+import Layout from '../components/layout'
+import Header from '../components/Header'
+import Home from '../components/Home'
+import Footer from '../components/Footer'
 
 const IndexPage = () => (
   <Layout>
-    <ListArticles />
+    <Header />
+    <Home />
+    <Footer/>
   </Layout>
 )
 

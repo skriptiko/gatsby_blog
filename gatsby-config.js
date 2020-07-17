@@ -1,34 +1,51 @@
-if (process.env.NODE_ENV === "development") {
-  require("dotenv").config()
-}
-
 module.exports = {
+  siteMetadata: {
+    title: `title`,
+    description: `description`,
+    author: `@author`,
+  },
   plugins: [
-    "gatsby-plugin-react-helmet",
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-antd`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-contentful`,
       options: {
-        name: "images",
+        spaceId: "4pfgzkdm6f5q",
+        accessToken: "Ee89-p519yhxYJR_TuMu0gg0O5nCS3T2BofoX5BN_9A",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `montserrat\:400`,
+          `muli\:300,700`
+        ]
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-source-contentful",
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        spaceId: "8maj9my06hym",
-        accessToken: "EyP8b_-BDUTvvp3J-TtvbRbmmDPVoDrYJ-_d39cSQjY",
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-antd",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: "gatsby-starter-default",
-        short_name: "starter",
-        start_url: "/",
-      },
-    },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }
